@@ -19,7 +19,7 @@ const ImgBox = styled.div`
 const StyledImgBox = ({ url }) => {
   return (
     <ImgBox>
-      <img src={url} />
+      <img src={url} alt="adsf" />
     </ImgBox>
   );
 };

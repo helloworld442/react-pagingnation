@@ -10,10 +10,9 @@ const ImgItemBlock = styled.div`
 `;
 
 const ImgListItemBlock = () => {
-  let image = useImage();
   let params = parseInt(useParams().pagingId);
   params = params ? params : 1;
-  image = image.slice((params - 1) * 4, params * 4);
+  let image = useImage(params);
   return (
     <ImgItemBlock>
       {image && image.map((val) => <StyledImgBox key={val.id} url={val.url} />)}

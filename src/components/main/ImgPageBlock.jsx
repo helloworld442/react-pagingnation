@@ -12,10 +12,14 @@ const PageBlock = styled.div`
 `;
 
 const ImgPageBlock = () => {
-  const totalImageNumber = 20;
+  //set totalImageNumber and onePagingNumber in .env
+  const totalImageNumber = import.meta.env.VITE_CAT_NUM;
+  const onePagingNumber = import.meta.env.VITE_CAT_ONE_PAGE_NUM;
   const pageNumData = Array.from(
-    { length: Math.ceil(totalImageNumber / 4) },
-    (v, i) => i + 1
+    {
+      length: Math.ceil(totalImageNumber / onePagingNumber),
+    },
+    (_, i) => i + 1
   );
   return (
     <PageBlock>
