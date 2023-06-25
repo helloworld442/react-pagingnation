@@ -1,13 +1,13 @@
 import React from "react";
 import ImgListBlock from "../components/main/ImgListBlock";
-import ImgListItemBlock from "../components/main/ImgLIstItemBlock";
 import ImgPageBlock from "../components/main/ImgPageBlock";
 import ImgHeaderBlock from "../components/main/ImgHeaderBlock";
+import ImgContainer from "../contaniners/ImgContainer";
 const MainPage = () => {
   return (
     <ImgListBlock>
       <ImgHeaderBlock />
-      <ImgListItemBlock />
+      <ImgContainer />
       <ImgPageBlock />
     </ImgListBlock>
   );

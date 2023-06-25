@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import getImageDataHandler from "../lib/api/image";
 
-const useImage = (number) => {
+const useImage = () => {
   const [image, setImage] = useState([]);
   useEffect(() => {
     try {
       //when number is changed -> set image data
       const setImageDataHandler = async () => {
-        const imageData = await getImageDataHandler(number);
+        const imageData = await getImageDataHandler();
         return setImage(imageData);
       };
       setImageDataHandler();
@@ -19,7 +19,7 @@ const useImage = (number) => {
     return () => {
       setImage([]);
     };
-  }, [number]);
+  }, []);
   return image;
 };
 
